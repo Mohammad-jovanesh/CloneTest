@@ -1,7 +1,9 @@
 .heading {
     grid-column: 1 /-1;
     &_text {
+        font-family: $font_Pattaya;
         text-align: center;
         font-size: size(xl) * 2;
+        font-weight: 800;
     }
 }
