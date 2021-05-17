@@ -1,0 +1,32 @@
+.first_nav {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+
+    &_list {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        height: 100%;
+        &_item {
+            display: flex;
+            align-items: center;
+
+            &:nth-child(1) {
+                grid-column: 1/5;
+
+                text-align: left;
+
+                a {
+                    text-align: left;
+                    padding-left: 5rem;
+                }
+            }
+            a {
+                text-align: center;
+                width: 100%;
+
+                font-size: size(xl);
+            }
+        }
+    }
+}

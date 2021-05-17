@@ -1,0 +1,7 @@
+.heading {
+    grid-column: 1 /-1;
+    &_text {
+        text-align: center;
+        font-size: size(xl) * 2;
+    }
+}

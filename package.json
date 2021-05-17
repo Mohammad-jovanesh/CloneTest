@@ -1,0 +1,20 @@
+{
+  "name": "CloneTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -o css sass -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohammad-jovanesh/CloneTest.git"
+  },
+  "keywords": [],
+  "author": "Piramun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mohammad-jovanesh/CloneTest/issues"
+  },
+  "homepage": "https://github.com/Mohammad-jovanesh/CloneTest#readme"
+}
