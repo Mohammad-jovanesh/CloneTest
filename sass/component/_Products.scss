@@ -5,7 +5,25 @@
     width: 100%;
     padding-top: 10rem;
     margin-top: 1rem;
-
+    @include responsive(lg) {
+        padding: 3rem !important;
+        height: auto;
+        .Products_Items_text {
+            width: 75% !important;
+        }
+        @include responsive(xs) {
+            height: auto;
+            padding: 1rem auto !important;
+            .Products_Wrapper {
+                flex-direction: column;
+                height: 90% !important;
+            }
+            .Products_Items {
+                height: 50rem !important;
+                margin-bottom: 1rem;
+            }
+        }
+    }
     .Products_heading {
         text-align: center;
         font-size: size(xl);

@@ -5,6 +5,34 @@
     overflow: hidden;
     height: 80vh;
     width: 100%;
+    @include responsive(xl) {
+        height: 70vh;
+    }
+    @include responsive(lg) {
+        height: 60vh;
+        .slideshow_content {
+            bottom: 1rem !important;
+            left: 1rem !important;
+            max-width: 30rem !important;
+
+            padding: 1.5rem !important;
+
+            border-radius: 10px;
+            h1 {
+                font-size: size(md) !important;
+
+                margin-bottom: 1rem;
+            }
+            p {
+                width: 100%;
+                font-size: size(sm);
+                margin-left: 1rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: "...";
+            }
+        }
+    }
     &_slide {
         position: absolute;
         width: inherit;

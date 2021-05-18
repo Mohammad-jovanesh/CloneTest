@@ -6,3 +6,55 @@
         }
     }
 }
+@mixin DisplayFlex($AlignItems: center, $JustifyContent: center) {
+    display: flex;
+    align-items: $AlignItems;
+    justify-content: $JustifyContent;
+}
+
+@mixin FooterHeadings($font_size: size(lg)) {
+    .heading {
+        font-size: $font_size;
+        margin-bottom: 1rem;
+    }
+    &_list {
+        .Footer_items {
+            margin: 1rem auto;
+            .Footer_links {
+                font-size: size(md);
+                transition: all 0.3s linear;
+                &:hover {
+                    color: lighten(color(1), 50%);
+                    transition: all 0.3s linear;
+                }
+            }
+        }
+    }
+}
+@mixin responsive($breakpoint) {
+    @if ($breakpoint == xl) {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == lg) {
+        @media (max-width: 1000px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == md) {
+        @media screen and (max-width: 760px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == sm) {
+        @media screen and (max-width: 560px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == xs) {
+        @media screen and (max-width: 400px) {
+            @content;
+        }
+    }
+}

@@ -5,6 +5,12 @@
 }
 html {
     font-size: (10px/16px) * 100%;
+    @include responsive(sm) {
+        font-size: 50% !important;
+    }
+    @include responsive(xs) {
+        font-size: 43.75% !important;
+    }
 }
 .Container {
     display: grid;

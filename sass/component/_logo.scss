@@ -8,4 +8,7 @@
         width: 90%;
         margin: auto;
     }
+    @include responsive(xl) {
+        grid-column: 1/3;
+    }
 }

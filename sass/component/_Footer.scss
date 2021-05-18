@@ -1,0 +1,149 @@
+// Footer style
+
+.Footer {
+    grid-column: 1/-1;
+    grid-row: 4/4;
+    border-top: 4px solid color(1);
+    @include DisplayFlex(flex-start, space-evenly);
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+    @include responsive(lg) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        &_MoreInfo {
+            margin-bottom: 3rem;
+            align-self: flex-start;
+            grid-column: 1/2;
+            grid-row: 2/2;
+            padding-left: 5rem;
+        }
+        &_SingUp {
+            width: 100%;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            padding: 2rem 1rem;
+        }
+        &_Store_address {
+            margin-bottom: 3rem;
+            align-self: flex-start;
+            grid-column: 2/2;
+            grid-row: 2/2;
+            padding-left: 5rem;
+        }
+    }
+    @include responsive(md) {
+        .Footer_SingUp_Form {
+            .name_grop,
+            .sendEmail_grop {
+                flex-direction: column;
+            }
+            .name_grop {
+                .F_name {
+                    margin-bottom: 1rem;
+                }
+            }
+            .sendEmail_grop {
+                .Email {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+                .btn_submit {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include responsive(xs) {
+    }
+    &_MoreInfo {
+        @include FooterHeadings;
+    }
+    &_SingUp {
+        &_text {
+            margin-bottom: 1rem;
+            &_heading {
+                text-align: center;
+                font-size: size(xl);
+                margin-bottom: 1rem;
+            }
+            &_content {
+                text-align: center;
+                font-size: size(lg);
+                margin-bottom: 1rem;
+            }
+        }
+        &_Form {
+            width: 100%;
+
+            %boder_Form {
+                height: 50px;
+                border: 2px solid #444;
+                border-radius: 5px;
+                padding-left: 1rem;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 0 1rem;
+            .name_grop,
+            .sendEmail_grop {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+            }
+            .name_grop {
+                .F_name,
+                .L_name {
+                    width: 100%;
+                    @extend %boder_Form;
+                }
+                .F_name {
+                    margin-right: 1rem;
+                }
+            }
+            .sendEmail_grop {
+                margin-top: 1rem;
+                .Email {
+                    width: 70%;
+                    @extend %boder_Form;
+                    margin-right: 1rem;
+                }
+                .btn_submit {
+                    width: 40%;
+                    height: 50px;
+                    cursor: pointer;
+                    background-color: darken(color(1), 20%);
+                    outline: none;
+                    color: color(2);
+                    font-size: size(sm);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    &:hover {
+                        transition: all 0.3s ease;
+                        background-color: lighten(color(1), 10%);
+                    }
+                }
+            }
+        }
+    }
+    .Footer_Store_address {
+        height: 100%;
+        @include FooterHeadings;
+        &_list {
+            .Footer_items {
+                margin: 1rem auto;
+                .Footer_links {
+                    font-size: size(md);
+                    transition: all 0.3s linear;
+                    &:hover {
+                        color: lighten(color(1), 50%);
+                        transition: all 0.3s linear;
+                    }
+                }
+            }
+        }
+    }
+}
